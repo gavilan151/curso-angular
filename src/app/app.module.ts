@@ -3,18 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonalAdministrationModule } from './personal-administration/personal-administration.module';
+import { DetalleComponent } from './modulo-persona/detalle/detalle.component';
+import { ModuloPersonaModule } from './modulo-persona/modulo-persona.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
+
+
   imports: [
     BrowserModule,
-    AppRoutingModule
-    PersonalAdministrationModule
+    AppRoutingModule,
+    ModuloPersonaModule
+
   ],
   providers: [],
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
