@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { persona } from 'src/app/models/persona';
 
 @Component({
@@ -7,5 +7,8 @@ import { persona } from 'src/app/models/persona';
   styleUrls: ['./detalle.component.css']
 })
 export class DetalleComponent {
-  persona: persona = new persona( 26,"Gabriel",  "Miguel")
+
+  @Input()
+  personaSeleccionada:persona | null = null  ;
+
 }

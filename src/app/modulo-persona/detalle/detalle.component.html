@@ -1,8 +1,12 @@
-<h3>Listado del Personal</h3>
-<div>
-  Edad: {{persona.edad}}
-  <br>
-  Nombre: {{persona.nombre}}
-  <br>
-  Apellido: {{persona.apellido}}
+
+
+<div *ngIf="personaSeleccionada" class="editar-container">
+  <h4>Editando los datos de la persona</h4>
+
+  <label>Edad: </label>
+  <input type="number" [(ngModel)]="personaSeleccionada.edad">
+  <label>Nombre: </label>
+  <input type="text" [(ngModel)]="personaSeleccionada.nombre">
+  <label>Apellido: </label>
+  <input type="text" [(ngModel)]="personaSeleccionada.apellido">
 </div>

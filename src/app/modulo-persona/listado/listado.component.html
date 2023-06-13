@@ -1,0 +1,24 @@
+<h4>Listado del Personal</h4>
+
+<div *ngFor="let personaFor of personaList" class="persona-container" >
+  Edad: {{personaFor.edad}}
+  <br>
+  Nombre: {{personaFor.nombre}}
+  <br>
+  Apellido: {{personaFor.apellido}}
+
+
+  <div *ngIf="personaFor.edad < 18">
+       <span>es menor a 18</span>
+  </div>
+  <div *ngIf="personaFor.edad >= 18">
+    <span>es mayor a 18</span>
+  </div>
+
+
+  <button (click)="seleccionarPersona(personaFor)"> Editar </button>
+
+</div>
+
+
+<app-detalle [personaSeleccionada]="personaSeleccionada"> </app-detalle>

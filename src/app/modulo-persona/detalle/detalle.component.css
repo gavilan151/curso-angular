@@ -1,0 +1,5 @@
+.editar-container {
+  display: flex;
+  flex-direction: column;
+  background: rgb(231, 228, 223);
+}

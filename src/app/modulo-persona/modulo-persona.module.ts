@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetalleComponent } from './detalle/detalle.component';
+import { FormsModule } from '@angular/forms';
+import { ListadoComponent } from './listado/listado.component';
 
 
 
 @NgModule({
   declarations: [
-    DetalleComponent
+    DetalleComponent,
+    ListadoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
-  exports:[DetalleComponent]
+  exports:[DetalleComponent,ListadoComponent]
 })
 export class ModuloPersonaModule { }
