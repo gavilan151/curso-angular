@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DetalleComponent } from './detalle/detalle.component';
 import { FormsModule } from '@angular/forms';
 import { ListadoComponent } from './listado/listado.component';
+import { ModuloPersonaRoutingModule } from './modulo-persona-routing.module';
 
 
 
@@ -13,6 +14,7 @@ import { ListadoComponent } from './listado/listado.component';
   ],
   imports: [
     CommonModule,
+    ModuloPersonaRoutingModule,
     FormsModule
   ],
   exports:[DetalleComponent,ListadoComponent]

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DetalleComponent } from './modulo-persona/detalle/detalle.component';
 import { ModuloPersonaModule } from './modulo-persona/modulo-persona.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { ModuloPersonaModule } from './modulo-persona/modulo-persona.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ModuloPersonaModule,
+    BrowserAnimationsModule,
     ModuloPersonaModule
-
   ],
   providers: [],
 
