@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { persona } from 'src/app/models/persona';
 import { PersonaService } from 'src/app/services/persona.service';
 
@@ -17,7 +18,9 @@ export class ListadoComponent {
   personaSeleccionada: persona | null = null;
 
 
-  constructor(private personaService: PersonaService) {}
+  constructor(private personaService: PersonaService,
+              private router: Router) {}
+
   ngOnInit() {
     this.personaService.findAll().subscribe(res =>{
       this.personaList = res;
@@ -26,6 +29,7 @@ export class ListadoComponent {
     }) ;
   }
   seleccionarPersona(xpersona: persona) {
-    this.personaSeleccionada = xpersona;
+    this.router.navigate(["detalle",xpersona.id])
+
   }
 }
