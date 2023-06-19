@@ -4,7 +4,7 @@ import { DetalleComponent } from './detalle/detalle.component';
 import { FormsModule } from '@angular/forms';
 import { ListadoComponent } from './listado/listado.component';
 import { ModuloPersonaRoutingModule } from './modulo-persona-routing.module';
-
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -15,7 +15,9 @@ import { ModuloPersonaRoutingModule } from './modulo-persona-routing.module';
   imports: [
     CommonModule,
     ModuloPersonaRoutingModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
+
   ],
   exports:[DetalleComponent,ListadoComponent]
 })

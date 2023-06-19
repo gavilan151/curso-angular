@@ -1,19 +1,20 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 
-
 @Component({
-  selector: 'app-topbar',
-  templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.css']
+  selector: 'app-admin-topbar',
+  templateUrl: './admin-topbar.component.html',
+  styleUrls: ['./admin-topbar.component.css']
 })
-export class TopbarComponent {
+export class AdminTopbarComponent {
+
   @Output()
   expandioBoton = new EventEmitter<boolean>();
 
-  expandido = true;
+  expandido = false;
 
   onClick() {
     this.expandido = !this.expandido;
     this.expandioBoton.emit(this.expandido);
   }
+
 }
